@@ -84,7 +84,6 @@ export class Slide {
 
   slidesIndexNav(index) {
     const last = this.slideArray.length - 1;
-    console.log(last)
     this.index = {
       prev: index ? index - 1 : undefined,
       active: index,
@@ -146,7 +145,7 @@ export class Slide {
   }
 }
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
   constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
